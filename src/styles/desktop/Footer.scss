@@ -1,0 +1,83 @@
+@import '../partials/variables';
+@import '../partials/mixins';
+
+footer {
+  width: 100vw;
+  color: $offWhite;
+  background-color: black;
+  padding: 4rem;
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between; /* Space out sections horizontally */
+    align-items: flex-start; /* Align items to the top of the container */
+    gap: 3rem;  /* Adds spacing between sections */
+  }
+
+  .about, .quick-links, .legal, .credits {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 20%;  /* Control the width of each section */
+  }
+
+  .about h2, .quick-links h3, .legal h3, .credits h3 {
+    color: $orange;
+    font-size: 24px;
+    margin-bottom: 0.5rem; /* Reduced margin */
+  }
+
+  .about p, .quick-links p, .legal p, .credits p {
+    font-size: 16px;
+    font-family: $poppins;
+    color: white;
+    font-weight: 300;
+    line-height: 1.5;
+    white-space: normal; /* Allow text to wrap as needed */
+  }
+
+  .quick-links ul, .legal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .quick-links li, .legal li {
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: $offWhite;
+    text-decoration: none;
+    padding: 0.5rem;
+    font-size: 16px;
+    font-family: $poppins;
+    font-weight: 300;
+    transition: all .1s linear;
+  }
+
+  a:hover {
+    color: $orange;
+  }
+
+  .credits a {
+    font-size: 16px;
+    color: white;
+    transition: all .1s linear;
+  }
+
+  .credits a:hover {
+    color: $offWhite;
+  }
+
+  /* Footer Bottom Section */
+  .footer-bottom {
+    width: 100%;
+    text-align: center;  /* Center align text */
+    margin-top: 2rem;  /* Adds space between the footer sections and the copyright text */
+    font-size: 14px;
+    color: $offWhite;
+    font-family: $poppins;
+    font-weight: 300;
+  }
+}
